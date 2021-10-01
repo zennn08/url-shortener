@@ -7,7 +7,7 @@ const express = require("express"),
     db = database.get("short-url");
 
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
 
 const isUrl = (url) => {
     return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
